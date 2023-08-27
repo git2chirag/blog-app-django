@@ -16,7 +16,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path,include 
-from  users import views
+from  users import views 
 
 
 #extra_patterns =[
@@ -26,7 +26,7 @@ from  users import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('blog.urls')),
-    path('register/',views.register),
+    path('register/',views.register,name='regsiter'),
     
 
 ]
